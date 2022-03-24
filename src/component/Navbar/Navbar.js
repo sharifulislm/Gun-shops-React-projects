@@ -4,7 +4,7 @@ import './Navbar.css'
 const Navbar = () => {
     return (
         <div className='navbar'>
-            <h1>Kopa sumsu taka dibo apsu</h1>
+            <h1>Gun shops React projects</h1>
             
         </div>
     );

@@ -7,7 +7,10 @@ import Card from './component/Card/Card';
 function App() {
 
   const [gans, setGans]=useState([]);
-
+  const [cart, setcart]=useState([]);
+const handleAddToCart = (id) => {
+  console.log(id);
+}
 
 useEffect (() =>  {
   fetch("https://raw.githubusercontent.com/mir-hussain/guns/main/data.json")
@@ -20,7 +23,7 @@ useEffect (() =>  {
      <Navbar> </Navbar>
      <div className='card-container'>
 {
-  gans.map(gan => (<Card data={gan} key={gan.id}></Card>))
+  gans.map(gan => (<Card handleAddToCart={handleAddToCart} data={gan} key={gan.id}></Card>))
 }
 
 
